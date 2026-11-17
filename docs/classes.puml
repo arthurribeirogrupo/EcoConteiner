@@ -1,0 +1,71 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Cliente {
+- id: int
+- nome: String
+- email: String
+  + validarDados(): boolean
+  + solicitarOrcamento(): Solicitacao
+}
+
+class Administrador {
+- id: int
+- nome: String
+  + consultarSolicitacoes(): List<Solicitacao>
+}
+
+class ModeloCasa {
+- id: int
+- nome: String
+- area: double
+- valorBase: double
+- descricao: String
+  + calcularEstimativa(area: double): double
+  + consultarDetalhes(): String
+}
+
+class Solicitacao {
+- id: long
+- data: Date
+- areaDesejada: double
+- valorEstimado: double
+- mensagem: String
+- status: String
+  + validar(): boolean
+  + calcularValor(modelo: ModeloCasa): double
+  + consultarStatus(): String
+}
+
+class CatalogoModelos {
+- modelos: List<ModeloCasa>
+  + listarModelos(): List<ModeloCasa>
+  + buscarModelo(id: int): ModeloCasa
+}
+
+class OrcamentoService {
+  + calcular(modelo: ModeloCasa, area: double): double
+  + validarArea(area: double): boolean
+  + criarSolicitacao(cliente: Cliente, modelo: ModeloCasa, area: double): Solicitacao
+}
+
+class SolicitacaoRepository {
+  + salvar(solicitacao: Solicitacao): boolean
+  + listarTodos(): List<Solicitacao>
+}
+
+class PainelAdministrativo {
+  + carregarSolicitacoes(): List<Solicitacao>
+}
+
+Cliente "1" -- "0..*" Solicitacao : realiza
+ModeloCasa "1" -- "0..*" Solicitacao : selecionado
+CatalogoModelos "1" o-- "1..*" ModeloCasa : disponibiliza
+OrcamentoService ..> ModeloCasa : utiliza
+OrcamentoService ..> Solicitacao : cria
+OrcamentoService ..> SolicitacaoRepository : utiliza
+SolicitacaoRepository "1" o-- "0..*" Solicitacao : armazena
+Administrador ..> PainelAdministrativo : utiliza
+PainelAdministrativo ..> SolicitacaoRepository : consulta
+
+@enduml

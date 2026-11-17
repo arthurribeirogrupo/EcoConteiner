@@ -1,0 +1,33 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor Cliente
+actor Administrador
+
+rectangle "EcoConteiner Casas" {
+    usecase "Consultar modelos" as UC1
+    usecase "Visualizar detalhes" as UC2
+    usecase "Solicitar orçamento" as UC3
+    usecase "Preencher dados" as UC4
+    usecase "Calcular estimativa" as UC5
+    usecase "Consultar solicitações" as UC6
+    usecase "Visualizar status" as UC7
+}
+
+Cliente --> UC1
+Cliente --> UC2
+Cliente --> UC3
+
+UC3 ..> UC4 : <<include>>
+UC3 ..> UC5 : <<include>>
+
+Administrador --> UC6
+Administrador --> UC7
+
+note bottom of UC6
+Painel demonstrativo
+sem autenticação
+end note
+
+@enduml

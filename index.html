@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoConteiner Casas - Moradias sustentáveis construídas com contêineres.">
+    <title>EcoConteiner Casas | Moradia Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <a href="#inicio" class="logo">
+        <span class="logo-icon">🌱</span>
+        <span>Eco<span class="green">Conteiner</span><small>CASAS SUSTENTÁVEIS</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+
+    <nav id="navigation">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#modelos">Modelos</a>
+        <a href="#sustentabilidade">Sustentabilidade</a>
+        <a href="#orcamento" class="nav-button">Solicitar orçamento</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <span class="eyebrow">MORADIA INTELIGENTE. FUTURO SUSTENTÁVEL.</span>
+            <h1>Um novo jeito de <span>morar bem.</span></h1>
+            <p>
+                Transformamos contêineres em espaços modernos,
+                confortáveis e sustentáveis. Descubra uma nova
+                possibilidade para construir seu futuro.
+            </p>
+            <div class="hero-actions">
+                <a href="#modelos" class="button primary">Conheça os modelos →</a>
+                <a href="#sobre" class="button secondary">Conheça o projeto</a>
+            </div>
+            <div class="hero-stats">
+                <div><strong>+ Sustentável</strong><small>Reaproveitamento de estruturas</small></div>
+                <div><strong>Moderno</strong><small>Design inteligente</small></div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" alt="Casa moderna integrada à natureza">
+            <div class="image-label">
+                <span>🌿</span>
+                <div><strong>Construindo possibilidades</strong><small>Arquitetura sustentável</small></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="intro section" id="sobre">
+        <div class="section-tag">NOSSA PROPOSTA</div>
+        <h2>Mais que uma casa.<br><span>Uma escolha consciente.</span></h2>
+        <p class="section-description">
+            O EcoConteiner Casas apresenta alternativas de moradia
+            utilizando contêineres reaproveitados, unindo criatividade,
+            planejamento e consciência ambiental.
+        </p>
+        <div class="benefits">
+            <article class="benefit">
+                <span>♻️</span>
+                <h3>Reaproveitamento</h3>
+                <p>Valorização de estruturas que podem ganhar uma nova função.</p>
+            </article>
+            <article class="benefit">
+                <span>🏡</span>
+                <h3>Design moderno</h3>
+                <p>Ambientes planejados para unir funcionalidade e conforto.</p>
+            </article>
+            <article class="benefit">
+                <span>🌳</span>
+                <h3>Consciência ambiental</h3>
+                <p>Uma proposta que incentiva escolhas mais sustentáveis.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="models section" id="modelos">
+        <div class="section-tag">NOSSOS PROJETOS</div>
+        <h2>Encontre seu próximo <span>espaço.</span></h2>
+        <p class="section-description">Conheça os modelos demonstrativos disponíveis.</p>
+
+        <div class="model-grid" id="modelGrid"></div>
+    </section>
+
+    <section class="sustainability section" id="sustentabilidade">
+        <div class="sustain-image">
+            <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1000&q=85" alt="Casa de madeira em meio à natureza">
+        </div>
+        <div class="sustain-content">
+            <div class="section-tag">UM FUTURO MELHOR</div>
+            <h2>Construir pensando no <span>amanhã.</span></h2>
+            <p>
+                A construção com contêineres pode contribuir para o
+                reaproveitamento de materiais e incentivar projetos
+                com planejamento ambiental.
+            </p>
+            <ul>
+                <li>✓ Reutilização de estruturas</li>
+                <li>✓ Possibilidade de soluções eficientes</li>
+                <li>✓ Planejamento inteligente dos espaços</li>
+                <li>✓ Integração com tecnologias sustentáveis</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="quote section">
+        <span>“</span>
+        <h2>O futuro da moradia também pode ser sustentável.</h2>
+        <p>EcoConteiner Casas — Moradia inteligente. Futuro sustentável.</p>
+    </section>
+
+    <section class="budget section" id="orcamento">
+        <div class="budget-heading">
+            <div class="section-tag">VAMOS COMEÇAR?</div>
+            <h2>Solicite sua <span>estimativa.</span></h2>
+            <p>Preencha os dados abaixo para registrar seu interesse.</p>
+        </div>
+
+        <form id="budgetForm" class="budget-form">
+            <div class="form-grid">
+                <div class="field">
+                    <label for="name">Nome completo *</label>
+                    <input type="text" id="name" required maxlength="100" placeholder="Seu nome">
+                </div>
+                <div class="field">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" required maxlength="150" placeholder="seu@email.com">
+                </div>
+                <div class="field">
+                    <label for="model">Modelo desejado *</label>
+                    <select id="model" required>
+                        <option value="">Selecione um modelo</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="area">Área desejada (m²) *</label>
+                    <input type="number" id="area" min="10" max="500" step="1" required placeholder="Ex.: 60">
+                </div>
+            </div>
+            <div class="field">
+                <label for="message">Conte um pouco sobre seu projeto</label>
+                <textarea id="message" rows="4" maxlength="500" placeholder="Descreva sua ideia..."></textarea>
+            </div>
+            <p class="form-note">* Campos obrigatórios. A estimativa é ilustrativa e não representa proposta comercial.</p>
+            <button type="submit" class="button primary submit-button">Enviar solicitação →</button>
+            <p id="formFeedback" class="feedback" role="status" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <section class="admin section" id="painel">
+        <div class="section-tag">ÁREA DEMONSTRATIVA</div>
+        <h2>Painel de <span>solicitações.</span></h2>
+        <p class="section-description">
+            Consulte os registros realizados neste navegador.
+        </p>
+        <div class="admin-top">
+            <strong id="requestCount">0 solicitações</strong>
+            <button id="clearRequests" class="button secondary" type="button">Limpar registros</button>
+        </div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Modelo</th>
+                        <th>Área</th>
+                        <th>Estimativa</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="requestList">
+                    <tr><td colspan="5" class="empty">Nenhuma solicitação registrada.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="form-note">Painel acadêmico demonstrativo. Não possui login nem proteção administrativa.</p>
+    </section>
+</main>
+
+<footer class="footer">
+    <a href="#inicio" class="logo footer-logo">🌱 EcoConteiner Casas</a>
+    <p>Moradia inteligente. Futuro sustentável.</p>
+    <div class="footer-team">
+        Projeto acadêmico desenvolvido por:<br>
+        Arthur Ribeiro Grupo e Ana Clara Mazeto Lima Iran<br>
+        Análise e Projeto de Sistemas — Professor Euller — 2026
+    </div>
+    <p class="copyright">© 2026 EcoConteiner Casas. Projeto acadêmico.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
